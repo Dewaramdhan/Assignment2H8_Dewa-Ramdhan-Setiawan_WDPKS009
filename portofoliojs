@@ -1,0 +1,72 @@
+const myForm = document.getElementById('my-form')
+const fnama = document.getElementById('nama-id')
+const frole = document.getElementById('role-id')
+const favaliability = document.getElementById('avaliability-id')
+const fage = document.getElementById('usia-id')
+const flokasi = document.getElementById('lokasi-id')
+const fyears = document.getElementById('pengalaman-id')
+const femail = document.getElementById('email-id')
+
+const buttonReset = document.getElementById('reset-button')
+const formbox = document.getElementById('form-box')
+const buttonEdit = document.getElementById('my-button')
+
+buttonEdit.addEventListener('click', () => {
+  formbox.classList.toggle('show')
+})
+
+myForm.addEventListener('submit', (event) => {
+  event.preventDefault()
+
+  const currentNama = myForm.elements.fnama.value
+  const currentRole =  myForm.elements.frole.value
+  const currentAvaliability =  myForm.elements.favaliability.value
+  const currentAge =  myForm.elements.fage.value
+  const currentLokasi =  myForm.elements.flokasi.value
+  const currentYears =  myForm.elements.fyears.value
+  const currentEmail =  myForm.elements.femail.value
+
+  // Update form fields
+  fnama.innerHTML = currentNama
+  frole.innerHTML = currentRole
+  favaliability.innerHTML = currentAvaliability
+  fage.innerHTML = currentAge
+  flokasi.innerHTML = currentLokasi
+  fyears.innerHTML = currentYears
+  femail.innerHTML = currentEmail
+
+
+})
+
+
+buttonReset.addEventListener('click', () => {
+  // Reset form fields to empty strings
+  myForm.elements.fnama.value = ''
+  myForm.elements.frole.value = ''
+  myForm.elements.favaliability.value = ''
+  myForm.elements.fage.value = ''
+  myForm.elements.flokasi.value = ''
+  myForm.elements.fyears.value = ''
+  myForm.elements.femail.value = ''
+
+  // Reset form fields displayed values
+  fnama.innerHTML = ''
+  frole.innerHTML = ''
+  favaliability.innerHTML = ''
+  fage.innerHTML = ''
+  flokasi.innerHTML = ''
+  fyears.innerHTML = ''
+  femail.innerHTML = ''
+
+
+  // Reset
+  fnama.innerHTML = currentNama
+  frole.innerHTML = currentRole
+  favaliability.innerHTML = currentAvaliability
+  fage.innerHTML = currentAge
+  flokasi.innerHTML = currentLokasi
+  fyears.innerHTML = currentYears
+  femail.innerHTML = currentEmail
+  
+})
+
